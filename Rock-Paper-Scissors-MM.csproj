@@ -6,6 +6,7 @@
     <RootNamespace>Rock_Paper_Scissors_MM</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <StartupObject>Rock_Paper_Scissors_MM.Start</StartupObject>
   </PropertyGroup>
 
 </Project>
