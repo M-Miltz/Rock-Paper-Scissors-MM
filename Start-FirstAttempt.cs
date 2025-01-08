@@ -36,7 +36,7 @@
 
             // 3. print random choice as a string:
 
-     Console.WriteLine("Good choice, " + nameFormatted + "! \nMy random choice is " + (randomChoice)+ ".");
+            Console.WriteLine("Good choice, " + nameFormatted + "! \nMy random choice is " + (randomChoice)+ ".");
 
 
 
@@ -58,32 +58,79 @@
             bool randomScissors = randomChoice == "SCISSORS" && playerChoice == "PAPER";
 
             // try while loop?
-                        
-            if  (isEqual)
+
+            if (isEqual)
             {
-                //draw
+                //draw - this needs to happen every time there is a draw. LOGIC DOESN'T WORK IF THERE IS A SECOND DRAW
+
                 Console.WriteLine("Oops, " + nameFormatted + "! The game was a draw. Let's try again.\nPlease type in Rock, Paper, or Scissors:");
+
+                Console.ReadLine();
+                Console.WriteLine("Good choice, " + nameFormatted + "! \nMy random choice is " + (randomChoice) + ".");
+
+
+                if (playerRock)
+
+                //game rules - player wins
+
+                {
+                    Console.WriteLine("ROCK beats SCISSORS!" + nameFormatted + " wins!");
+                }
+
+                else if (playerPaper)
+
+                {
+                    Console.WriteLine("PAPER beats ROCK!" + nameFormatted + " wins!");
+                }
+
+                else if (playerScissors)
+
+                {
+                    Console.WriteLine("SCISSORS beats PAPER!" + nameFormatted + " wins!");
+                }
+
+                // game rules - computer wins
+
+                else if (randomRock)
+
+                {
+                    Console.WriteLine("ROCK beats SCISSORS. I win! ");
+
+                }
+
+                else if (randomPaper)
+
+                {
+                    Console.WriteLine("PAPER beats ROCK. I win!");
+                }
+
+                else
+
+                {
+                    Console.WriteLine("SCISSORS beats PAPER. I win!");
+                }
+
 
             }
 
-           else if (playerRock)
+            else if (playerRock)
 
             //game rules - player wins
 
             {
-            Console.WriteLine("ROCK beats SCISSORS!" + nameFormatted + " wins!");
+                Console.WriteLine("ROCK beats SCISSORS!" + nameFormatted + " wins!");
             }
 
             else if (playerPaper)
 
             {
-            Console.WriteLine("PAPER beats ROCK!" + nameFormatted + " wins!");
+                Console.WriteLine("PAPER beats ROCK!" + nameFormatted + " wins!");
             }
 
             else if (playerScissors)
 
             {
-            Console.WriteLine("SCISSORS beats PAPER!" + nameFormatted + " wins!");
+                Console.WriteLine("SCISSORS beats PAPER!" + nameFormatted + " wins!");
             }
 
             // game rules - computer wins
@@ -91,27 +138,33 @@
             else if (randomRock)
 
             {
-            Console.WriteLine("ROCK beats SCISSORS! I win :p");
+                Console.WriteLine("ROCK beats SCISSORS. I win! ");
 
             }
 
             else if (randomPaper)
 
             {
-            Console.WriteLine("PAPER beats ROCK!I win :p");
+                Console.WriteLine("PAPER beats ROCK. I win!");
             }
 
-            else if (randomScissors)
-
-            {
-            Console.WriteLine("SCISSORS beats PAPER!I win :p");
-            }
             else
+
             {
-                Console.WriteLine("thanks for playing");
-
-
+            Console.WriteLine("SCISSORS beats PAPER. I win!");
             }
+
+          
+       Console.WriteLine("Thanks for playing, " + nameFormatted + ".");
+            string message = @"
+  _    _       _   _ _                   _     _   _                
+ | |  | |     | | (_) |                 | |   | | (_)               
+ | |  | |_ __ | |_ _| |  _ __   _____  _| |_  | |_ _ _ __ ___   ___ 
+ | |  | | '_ \| __| | | | '_ \ / _ \ \/ / __| | __| | '_ ` _ \ / _ \
+ | |__| | | | | |_| | | | | | |  __/>  <| |_  | |_| | | | | | |  __/
+  \____/|_| |_|\__|_|_| |_| |_|\___/_/\_\\__|  \__|_|_| |_| |_|\___|";
+            Console.WriteLine(message);
+
 
 
 
@@ -128,13 +181,13 @@
             //else if (playerChoice == "PAPER" && randomChoice == "ROCK")
 
             //{
-               //Console.WriteLine("PAPER beats ROCK!" + nameFormatted + " wins!");
+            //Console.WriteLine("PAPER beats ROCK!" + nameFormatted + " wins!");
             //}
 
             //else if (playerChoice == "SCISSORS" && randomChoice == "PAPER")
 
             //{
-                //Console.WriteLine("SCISSORS beats PAPER!" + nameFormatted + " wins!");
+            //Console.WriteLine("SCISSORS beats PAPER!" + nameFormatted + " wins!");
             //}
 
             // game rules - computer wins
@@ -142,24 +195,24 @@
             //else if (randomChoice == "ROCK" && playerChoice == "SCISSORS")
 
             //{
-               // Console.WriteLine("ROCK beats SCISSORS! I win :p");
+            // Console.WriteLine("ROCK beats SCISSORS! I win :p");
 
             //}
 
             //else if (randomChoice == "PAPER" && playerChoice == "ROCK")
 
             //{
-               //Console.WriteLine("PAPER beats ROCK!" + nameFormatted + " wins!");
+            //Console.WriteLine("PAPER beats ROCK!" + nameFormatted + " wins!");
             //}
 
             //else if (randomChoice == "SCISSORS" && playerChoice == "PAPER")
 
             //{
-               // Console.WriteLine("SCISSORS beats PAPER!" + nameFormatted + " wins!");
+            // Console.WriteLine("SCISSORS beats PAPER!" + nameFormatted + " wins!");
             //}
             //else
             //{   //draw
-                //Console.WriteLine("Oops, " + nameFormatted + "! The game was a draw. Let's try again.\nPlease type in Rock, Paper, or Scissors:");
+            //Console.WriteLine("Oops, " + nameFormatted + "! The game was a draw. Let's try again.\nPlease type in Rock, Paper, or Scissors:");
             //}
 
 
@@ -191,7 +244,7 @@
 
 
 
-            }
+        }
 
     }
    
